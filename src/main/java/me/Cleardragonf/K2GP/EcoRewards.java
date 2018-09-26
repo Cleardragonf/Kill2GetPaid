@@ -24,7 +24,7 @@ public class EcoRewards {
 
     @Listener
     public void derp(DamageEntityEvent event, @First PrimedTNT src) {
-        UUID KillerA = src.getDetonator().get().getUniqueId();
+        String KillerA = src.toString();
         Sponge.getGame().getServer().getBroadcastChannel().send(Text.of(KillerA + "I saw that!"));
 
 
