@@ -30,7 +30,7 @@ public class ConfigurationManager {
 
 
 
-    //The configuration folder for this plugi
+    //The configuration folder for this plugin
     public void ConfigurationManager2(File configDir) {
         this.configDir = configDir;
     }

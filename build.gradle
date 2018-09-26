@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'Kill2GetPaid'
-version '1.1-SNAPSHOT'
+version 'T.1-SNAPSHOT'
 
 sourceCompatibility = 1.8
 

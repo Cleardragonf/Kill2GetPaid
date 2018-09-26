@@ -7,6 +7,7 @@ import java.util.UUID;
 
 import org.spongepowered.api.Sponge;
 import org.spongepowered.api.entity.Entity;
+import org.spongepowered.api.entity.explosive.PrimedTNT;
 import org.spongepowered.api.entity.living.player.Player;
 import org.spongepowered.api.entity.projectile.Projectile;
 import org.spongepowered.api.event.Listener;
@@ -21,17 +22,21 @@ import org.spongepowered.api.text.format.TextColors;
 
 public class EcoRewards {
 
-    //@Listener
-    //public void derp(DamageEntityEvent event) {
-    //  Sponge.getGame().getServer().getBroadcastChannel().send(Text.of(("*****Starting Damge Event*****")));
-    //  int i= 0;
-    //  for (Object causeObject : event.getCause()) {
-    //	  Sponge.getGame().getServer().getBroadcastChannel().send(Text.of(" - " + i++ + causeObject.toString()));
-    //  }
-    //  for (Map.Entry<EventContextKey<?>, Object> entry : event.getContext().asMap().entrySet()) {
-    //	  Sponge.getGame().getServer().getBroadcastChannel().send(Text.of("- " + entry.getKey().getId() + " : " + entry.getValue()));
-    //  }
-    //}
+    @Listener
+    public void derp(DamageEntityEvent event, @First PrimedTNT src) {
+        UUID KillerA = src.getDetonator().get().getUniqueId();
+        Sponge.getGame().getServer().getBroadcastChannel().send(Text.of(KillerA + "I saw that!"));
+
+
+      //Sponge.getGame().getServer().getBroadcastChannel().send(Text.of(("*****Starting Damage Event*****")));
+      //int i= 0;
+      //for (Object causeObject : event.getCause()) {
+    	//Sponge.getGame().getServer().getBroadcastChannel().send(Text.of(" - " + i++ + causeObject.toString()));
+      //}
+      //for (Map.Entry<EventContextKey<?>, Object> entry : event.getContext().asMap().entrySet()) {
+    	//  Sponge.getGame().getServer().getBroadcastChannel().send(Text.of("- " + entry.getKey().getId() + " : " + entry.getValue()));
+      //}
+    }
 
 
     @Listener
